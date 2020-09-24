@@ -5,7 +5,10 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'canela': ["Canela Light", 'sans-serif']
+    }
   },
   variants: {},
   plugins: [],

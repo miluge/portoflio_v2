@@ -1,0 +1,27 @@
+{
+  "name": "portoflio_v2",
+  "version": "1.0.0",
+  "description": "Web Developper Portfolio of Guillaume Blondel made with Tailwind.css and Alpine.JS",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.0.0",
+    "tailwindcss": "^1.8.10",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:css": "postcss src/tailwind.css -o css/style.css",
+    "watch": "watch 'npm run build:css' ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miluge/portoflio_v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miluge/portoflio_v2/issues"
+  },
+  "homepage": "https://github.com/miluge/portoflio_v2#readme"
+}
