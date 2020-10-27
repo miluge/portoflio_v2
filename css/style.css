@@ -612,25 +612,35 @@ video {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1024px;
+      max-width: 1024px;
   }
 }
 
 @media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
+    .container {
+        max-width: 1280px;
+    }
+}
+
+.project-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-width: 2px;
+    --border-opacity: 1;
+    border-color: #f56565;
+    border-color: rgba(245, 101, 101, var(--border-opacity));
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
-  --space-y-reverse: 0;
-  margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
-  margin-bottom: calc(0px * var(--space-y-reverse));
+    --space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(0px * var(--space-y-reverse));
 }
 
 .space-x-0 > :not(template) ~ :not(template) {
-  --space-x-reverse: 0;
-  margin-right: calc(0px * var(--space-x-reverse));
+    --space-x-reverse: 0;
+    margin-right: calc(0px * var(--space-x-reverse));
   margin-left: calc(0px * calc(1 - var(--space-x-reverse)));
 }
 
@@ -10194,19 +10204,23 @@ video {
 }
 
 .font-serif {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .font-mono {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-canela {
+    font-family: Canela Light, sans-serif;
 }
 
 .font-hairline {
-  font-weight: 100;
+    font-weight: 100;
 }
 
 .font-thin {
-  font-weight: 200;
+    font-weight: 200;
 }
 
 .font-light {
@@ -21233,24 +21247,97 @@ video {
 }
 
 .animate-pulse {
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .animate-bounce {
-  -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+    animation: bounce 1s infinite;
+}
+
+/* Setting fade transition and default settings */
+
+body {
+    color: #000;
+    background-color: #f4f4f4;
+    transition: background-color 1s ease;
+}
+
+/* panel styles */
+
+.panel {
+    /* min height incase content is higher than window height */
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    /* outline: 10px solid hotpink; */
+    /* turn above on to see the edge of panels */
+}
+
+/* colours */
+
+.color-violet {
+    background-color: #7A4EAB;
+}
+
+.color-indigo {
+    background-color: #4332CF;
+}
+
+.color-blue {
+    background-color: #2F8FED;
+}
+
+.color-green {
+    background-color: #4DCF42;
+}
+
+.color-yellow {
+    background-color: #FAEB33;
+}
+
+.color-orange {
+    background-color: #F19031;
+}
+
+.color-red {
+    background-color: #F2293A;
+}
+
+/* styling for demo, can ignore */
+
+body {
+    text-align: center;
+    font-size: 120%;
+    line-height: 1.618;
+}
+
+h1, h2 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+}
+
+p {
+    max-width: 30em;
+    margin-bottom: 1.618em;
+}
+
+a {
+    color: #4332CF;
 }
 
 @media (min-width: 640px) {
-  .sm\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
     .sm\:container {
-      max-width: 640px;
+        width: 100%;
     }
+
+    @media (min-width: 640px) {
+        .sm\:container {
+            max-width: 640px;
+        }
   }
 
   @media (min-width: 768px) {
@@ -30842,23 +30929,27 @@ video {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .sm\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
+    .sm\:font-serif {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
 
-  .sm\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
+    .sm\:font-mono {
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
 
-  .sm\:font-hairline {
-    font-weight: 100;
-  }
+    .sm\:font-canela {
+        font-family: Canela Light, sans-serif;
+    }
 
-  .sm\:font-thin {
-    font-weight: 200;
-  }
+    .sm\:font-hairline {
+        font-weight: 100;
+    }
 
-  .sm\:font-light {
+    .sm\:font-thin {
+        font-weight: 200;
+    }
+
+    .sm\:font-light {
     font-weight: 300;
   }
 
@@ -51426,23 +51517,27 @@ video {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .md\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
+    .md\:font-serif {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
 
-  .md\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
+    .md\:font-mono {
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
 
-  .md\:font-hairline {
-    font-weight: 100;
-  }
+    .md\:font-canela {
+        font-family: Canela Light, sans-serif;
+    }
 
-  .md\:font-thin {
-    font-weight: 200;
-  }
+    .md\:font-hairline {
+        font-weight: 100;
+    }
 
-  .md\:font-light {
+    .md\:font-thin {
+        font-weight: 200;
+    }
+
+    .md\:font-light {
     font-weight: 300;
   }
 
@@ -72010,23 +72105,27 @@ video {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .lg\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
+    .lg\:font-serif {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
 
-  .lg\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
+    .lg\:font-mono {
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
 
-  .lg\:font-hairline {
-    font-weight: 100;
-  }
+    .lg\:font-canela {
+        font-family: Canela Light, sans-serif;
+    }
 
-  .lg\:font-thin {
-    font-weight: 200;
-  }
+    .lg\:font-hairline {
+        font-weight: 100;
+    }
 
-  .lg\:font-light {
+    .lg\:font-thin {
+        font-weight: 200;
+    }
+
+    .lg\:font-light {
     font-weight: 300;
   }
 
@@ -92594,23 +92693,27 @@ video {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
-  .xl\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  }
+    .xl\:font-serif {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    }
 
-  .xl\:font-mono {
-    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  }
+    .xl\:font-mono {
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
 
-  .xl\:font-hairline {
-    font-weight: 100;
-  }
+    .xl\:font-canela {
+        font-family: Canela Light, sans-serif;
+    }
 
-  .xl\:font-thin {
-    font-weight: 200;
-  }
+    .xl\:font-hairline {
+        font-weight: 100;
+    }
 
-  .xl\:font-light {
+    .xl\:font-thin {
+        font-weight: 200;
+    }
+
+    .xl\:font-light {
     font-weight: 300;
   }
 
@@ -103557,15 +103660,15 @@ video {
             animation: none;
   }
 
-  .xl\:animate-spin {
-    -webkit-animation: spin 1s linear infinite;
-            animation: spin 1s linear infinite;
-  }
+    .xl\:animate-spin {
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+    }
 
-  .xl\:animate-ping {
-    -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
+    .xl\:animate-ping {
+        -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
 
     .xl\:animate-pulse {
         -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -103576,79 +103679,4 @@ video {
         -webkit-animation: bounce 1s infinite;
         animation: bounce 1s infinite;
     }
-}
-
-/* Setting fade transition and default settings */
-body {
-    color: #000;
-    background-color: #f4f4f4;
-    transition: background-color 1s ease;
-}
-
-/* panel styles */
-.panel {
-    /* min height incase content is higher than window height */
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    font-family: sans-serif;
-    /* outline: 10px solid hotpink; */
-    /* turn above on to see the edge of panels */
-}
-
-/* colours */
-
-.color-white {
-    background-color: #e56b6f;
-}
-
-.color-violet {
-    background-color: #355070;
-}
-
-.color-indigo {
-    background-color: #355070;
-}
-
-.color-blue {
-    background-color: #6d597a;
-}
-
-.color-green {
-    background-color: #6d597a;
-}
-
-.color-yellow {
-    background-color: #b56576;
-}
-
-.color-orange {
-    background-color: #b56576;
-}
-
-.color-red {
-    background-color: #e56b6f;
-}
-
-
-/* styling for demo, can ignore */
-body {
-    text-align: center;
-    font-size: 120%;
-    line-height: 1.618;
-}
-
-h1, h2 {
-    font-size: 3em;
-    letter-spacing: -0.05em;
-    line-height: 1.1;
-}
-
-p {
-    max-width: 30em;
-    margin-bottom: 1.618em;
-}
-
-a {
-    color: #4332CF;
 }

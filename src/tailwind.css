@@ -10,6 +10,12 @@
     }
 }
 
+@layer components {
+    .project-card {
+        @apply flex justify-center items-center border-t-2 border-current-500;
+    }
+}
+
 /* Setting fade transition and default settings */
 body {
     color: #000;
@@ -21,7 +27,6 @@ body {
 .panel {
     /* min height incase content is higher than window height */
     min-height: 100vh;
-    display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: sans-serif;

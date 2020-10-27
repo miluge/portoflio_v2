@@ -4,11 +4,14 @@
   "description": "Web Developper Portfolio of Guillaume Blondel made with Tailwind.css and Alpine.JS",
   "main": "postcss.config.js",
   "dependencies": {
-    "autoprefixer": "^10.0.0",
+    "autoprefixer": "^10.0.1",
     "tailwindcss": "^1.8.10",
     "watch": "^1.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0"
+  },
   "scripts": {
     "build:css": "postcss src/tailwind.css -o css/style.css",
     "watch": "watch 'npm run build:css' ./"

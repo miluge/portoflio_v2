@@ -8,6 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link crossorigin="anonymous" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Guillaume Blondel Web Developper Portfolio</title>
 </head>
 <body>
@@ -15,31 +16,51 @@
     <p class="mb-0">ZEUBI</p>
 </header>
 <main class="container mx-auto">
-    <div class="panel h-screen justify-center" data-color="white">
+    <div class="panel flex h-screen justify-center" data-color="white">
         <p class="text-white text-6xl">Guillaume</p>
     </div>
-    <div class="panel container border-t-2 border-current-500" data-color="violet">
-        <h2 class="text-white">Intro</h2>
+    <div class="panel flex container border-t-2 border-current-500" data-color="violet">
+        <div class="text-white" data-aos="fade-right" data-aos-duration="1300" data-aos-easing="ease-in-out-cubic">
+            <h2>
+                'Sup
+                <h2>
+        </div>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.</p>
     </div>
-    <div class="panel container border-t-2 border-current-500" data-color="indigo">
-        <h2 class="text-white">Stack</h2>
+    <div class="panel h-screen container border-t-2 border-current-500" data-color="indigo">
+        <div class="text-white h-full">
+            <p>Stack</p>
+        </div>
     </div>
-    <div class="panel container border-t-2 border-current-500" data-color="blue">
-        <h2 class="text-white">Blue panel</h2>
+    <div class="panel flex container border-t-2 border-current-500" data-color="blue">
+        <h2 class="text-white h-full">Blue panel</h2>
     </div>
     <div class="panel container border-t-2 border-current-500" data-color="green">
-        <h2 class="text-white">Green panel</h2>
+        <h2 class="text-white h-full">Green panel</h2>
     </div>
     <div class="panel container border-t-2 border-current-500" data-color="yellow">
-        <h2 class="text-white">Yellow panel</h2>
+        <h2 class="text-white h-full">Yellow panel</h2>
     </div>
     <div class="panel container border-t-2 border-current-500" data-color="orange">
-        <h2 class="text-white">Projects</h2>
+        <h2 class="text-white my-10">Projects</h2>
+        <div class="flex flex-col">
+            <div class="project-card" data-aos="flip-up" data-aos-duration="1500">
+                <p>DDJewelry</p>
+            </div>
+            <div class="project-card" data-aos="flip-up" data-aos-duration="1500">
+                <p>DashBoard</p>
+            </div>
+            <div class="project-card" data-aos="flip-up" data-aos-duration="1500">
+                <p>Sevy Design</p>
+            </div>
+            <div class="project-card" data-aos="flip-up" data-aos-duration="1500">
+                <p>DROOPist</p>
+            </div>
+        </div>
     </div>
     <div class="panel flex-col justify-center" data-color="red">
         <p>Hit me up!</p>
@@ -60,6 +81,10 @@
 <script crossorigin="anonymous"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="src/JS/bgFade.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
