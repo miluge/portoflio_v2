@@ -103567,13 +103567,83 @@ video {
             animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
-  .xl\:animate-pulse {
-    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
+    .xl\:animate-pulse {
+        -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
 
-  .xl\:animate-bounce {
-    -webkit-animation: bounce 1s infinite;
-            animation: bounce 1s infinite;
-  }
+    .xl\:animate-bounce {
+        -webkit-animation: bounce 1s infinite;
+        animation: bounce 1s infinite;
+    }
+}
+
+/* Setting fade transition and default settings */
+body {
+    color: #000;
+    background-color: #f4f4f4;
+    transition: background-color 1s ease;
+}
+
+/* panel styles */
+.panel {
+    /* min height incase content is higher than window height */
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    /* outline: 10px solid hotpink; */
+    /* turn above on to see the edge of panels */
+}
+
+/* colours */
+.color-violet {
+    background-color: #ff9a9e;
+}
+
+.color-indigo {
+    background-color: #fcb69f;
+}
+
+.color-blue {
+    background-color: #2F8FED;
+}
+
+.color-green {
+    background-color: #4DCF42;
+}
+
+.color-yellow {
+    background-color: #FAEB33;
+}
+
+.color-orange {
+    background-color: #F19031;
+}
+
+.color-red {
+    background-color: #F2293A;
+}
+
+/* styling for demo, can ignore */
+body {
+    text-align: center;
+    font-size: 120%;
+    line-height: 1.618;
+}
+
+h1, h2 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+}
+
+p {
+    max-width: 30em;
+    margin-bottom: 1.618em;
+}
+
+a {
+    color: #4332CF;
 }
